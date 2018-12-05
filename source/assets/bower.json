@@ -1,0 +1,30 @@
+{
+  "name": "foxlaby ngjs",
+  "authors": [
+    "Karim Mohamed <komicho1996@gmail.com>"
+  ],
+  "description": "Create a new web application",
+  "main": "index.html",
+  "keywords": [
+    "foxlaby",
+    "ngjs"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular.min": "https://code.angularjs.org/1.5.5/angular.min.js",
+    "angular-route.min": "https://code.angularjs.org/1.5.5/angular-route.min.js",
+    "jquery-1.11.3": "https://code.jquery.com/jquery-1.11.3.js",
+    "bootstrap-rtl.min": "https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css",
+    "angular-marked": "^1.2.2"
+  }
+}

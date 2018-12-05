@@ -1,0 +1,103 @@
+section.content{
+    width: auto;
+}
+section.content > .hello{
+    width: 100%;
+    background: #3498db;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+section.content > .hello .layer{
+    background: rgba(0, 0, 0, 0.77);
+    padding: 95px;
+}
+section.content > .hello .layer > .content > h1{
+    color: #fff;
+    font-size: 57px;
+    margin: 0px;
+    margin-bottom: 35px;
+}
+section.content > .hello .layer > .content > h2{
+    color: #fff;
+    margin: 0px;
+    margin-bottom: 35px;
+}
+section.content > .hello .layer > .content > p{
+    color: #fff;
+    font-size: 17px;
+    margin: 0px;
+}
+section.content > .hello .layer > .content > p span{
+    margin-left: 15px;
+}
+section.content > .hello .layer > .content > p span a{
+    color: #eee;
+}
+section.content > .content-list div div div .content-box{
+    width: auto;
+    counter-reset:li;
+}
+section.content > .content-list div div div .content-box > li{
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0px;
+    list-style:none;
+}
+section.content > .content-list div div div .content-box > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top: 0px;
+    right: -33px;
+    background:#3498db;
+    border: 3px solid #2780bb;
+    border-radius: 50px;
+    color:#fff;
+    font-size: 19px;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+    padding:11px;
+}
+section.content > .content-list div div div .content-box > li h2{
+    font-size: 27px;
+    margin: 0px;
+}
+/* *************************************** .content view *************************************** */
+section.content > .content-list div div div .content-view{
+    width: auto;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0px;
+}
+/* *************************************** ./content view *************************************** */
+section.content > .content-list div div div .categorys-box{
+    width: auto;
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0px;
+}
+section.content > .content-list div div div .categorys-box .title{
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    font-size: 19px;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+section.content > .content-list div div div .categorys-box .category{
+    width: auto;
+}
+section.content > .content-list div div div .categorys-box .category ul{
+    list-style-type: none;
+    padding-right: 15px;
+    margin: 0px;
+}
+section.content > .content-list div div div .categorys-box .category ul li{}
+section.content > .content-list div div div .categorys-box .category ul li a{
+    color: #3498db;
+    font-size: 17px;
+}

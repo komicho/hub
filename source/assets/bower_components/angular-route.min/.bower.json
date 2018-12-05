@@ -1,0 +1,11 @@
+{
+  "name": "angular-route.min",
+  "_cacheHeaders": {
+    "Content-Length": "2119",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "main": "index.js",
+  "_source": "https://code.angularjs.org/1.5.5/angular-route.min.js",
+  "_target": "*",
+  "_originalSource": "https://code.angularjs.org/1.5.5/angular-route.min.js"
+}
