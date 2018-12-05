@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./assets/assets/resources/styles.css">
-        <script src="./assets/dist/all.js"></script>
+        <link rel="stylesheet" href="{{ $page->baseUrl }}assets/assets/resources/styles.css">
+        <script src="{{ $page->baseUrl }}assets/dist/all.js"></script>
         <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
     </head>
     <nav class="navbar navbar-default">
@@ -35,9 +35,9 @@
     </body>
    <footer>
         <div class="footer">
-            <img src="./assets/assets/resources/img/logo.png" alt="">
+            <img src="{{ $page->baseUrl }}assets/assets/resources/img/logo.png" alt="">
             <b>جميع الحقوق محفوظة - 2018</b>
         </div>
     </footer>
-    <script src="./assets/dist/core.js"></script>
+    <script src="{{ $page->baseUrl }}assets/dist/core.js"></script>
 </html>
