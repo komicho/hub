@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>مقدمة في نظام git</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../../assets/assets/resources/styles.css">
+        <script src="../../../assets/dist/all.js"></script>
+        <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+    </head>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#"><i class="fa fa-building" aria-hidden="true"></i></a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/">الصفحة الرئيسية</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    
+    <body>
+        <section class="content">
+            <div class="hello" style="background-image: url(../../../assets/assets/resources/img/background-text.jpg);">
+                <div class="layer">
+                    <div class="content">
+                        <h2>مقدمة في نظام git</h2>
+                        <!-- <p><span><i class="fa fa-user" aria-hidden="true"></i> <a href="#">كريم محمد</a></span> <span><i class="fa fa-bookmark" aria-hidden="true"></i> <a href="#">لارافيل</a></span></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- .content-view -->
+                            <div class="content-view">
+                                <p>جت <code>Git</code> هو برنامج حاسوب لإدارة الإصدارت (يُطلق على هذه العملية اسم &quot;إدارة النٌُسخ&quot; أيضا) وهو أحد برامج إدارة المراجعة الموزعة تمت برمجته ليكون سريعا في البداية قام لينوس تورفالدز ببرمجته ليستخدمه في تطوير نواة لينكس وليتجاوز عيوب ومشاكل برامج إدارة الإصدارت الأخرى، ثم انضم إليه لاحقا جونيو هامانو.</p>
+<h2>نشأة جت</h2>
+<p>يتم تطوير نواة لينكس بفضل مُساهمات مُطورين من جميع أنحاء العالم. في الفترة التي امتدت ما بين 1991 و2002 كان المُساهمات تتم على شكل ترقيعات أو ملفات مؤرشفة، لكن مع زيادة حجم النواة وعدد المُساهمين فيها، ظهرت الحاجة إلى استخدام نظام لتتبع كل هذه المُساهمات وإدارة مُختلف النُسخ، وتم استخدام نسخة من نظام BitKeeper التجاري للقيام بذلك. بعد توتر العلاقة الموجودة ما بين الشركة المُطورة لنظام BitKeeper ومُجتمع لينكس، قررت الشركة سحب الرخصة التي وضعتها تحت تصرفهم، ما دفع بـلينوس تورفالدس ومن معه من المُطورين إلى بناء نظام جديد يُعوض النظام القديم ويحل المشاكل التي كانت تُواجهه، ومن هنا نشأ نظام إدارة النُسخ Git.</p>
+<h2>مُميزات جت</h2>
+<p>يمتاز نظام جت بالخواص التالية</p>
+<ul>
+<li>السرعة</li>
+<li>بساطة التصميم</li>
+<li>دعم مُتقدم لمشاريع التطوير التي تعتمد تطويرا غير خطي (آلاف الفروع المتوازية)</li>
+<li>مُوزع بشكل كامل</li>
+<li>قادر على إدارة مشاريع كبيرة مُماثلة في حجمها لحجم لنواة لينكس بشكل فعال (من حيث السرعة ومن حيث حجم البيانات).</li>
+</ul>
+<p><a href="https://goo.gl/9R7xEi">المصدر</a></p>                            </div>
+                            <!-- ./content-view -->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="categorys-box">
+                                <div class="title">الاقسام</div>
+                                <div class="category" ng-init="allCategories()">
+                                    <ul>
+                                                                                <li ng-repeat="sub in categorie.subs"><a href="http://localhost:8000/git">الدخول في Git</a></li>
+                                                                            </ul>
+                                </div>
+                            </div>
+
+                            <!-- <div class="categorys-box">
+                                <div class="title">المساهمين</div>
+                                <div class="category">
+                                    <div class="media" ng-repeat="contributor in contributors">
+                                        <div class="media-left" style="padding:0px 0px 0px 10px">
+                                            <img class="media-object" ng-src="https://avatars.githubusercontent.com/u/contributor.author.id" style="width: 55px;height: auto;">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">contributor.author.name</h4>
+                                            contributor.message
+                                            <p><i>contributor.date | date:'yyyy-MM-dd'</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+    </body>
+   <footer>
+        <div class="footer">
+            <img src="../../../assets/assets/resources/img/logo.png" alt="">
+            <b>جميع الحقوق محفوظة - 2018</b>
+        </div>
+    </footer>
+    <script src="../../../assets/dist/core.js"></script>
+</html>

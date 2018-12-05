@@ -1,0 +1,135 @@
+body > section.workshop{
+    width: auto;
+}
+body > section.workshop > .hello{
+    width: 100%;
+    background: #16a085;
+    text-align: center;
+}
+body > section.workshop > .hello .layer{
+/*    background: rgba(0, 0, 0, 0.77);*/
+    padding: 95px;
+}
+body > section.workshop > .hello .layer > .content > h1{
+    color: #fff;
+    font-size: 57px;
+    margin: 0px;
+    margin-bottom: 35px;
+}
+body > section.workshop > .hello .layer > .content > p{
+    color: #fff;
+    font-size: 17px;
+    margin: 0px;
+}
+body > section.workshop > .workshops{
+    width: auto;
+}
+body > section.workshop > .workshops div div div > .workshop{
+    width: auto;
+    background: #fff;
+    margin: 57px 0px;
+}
+body > section.workshop > .workshops div div div > .workshop div div{
+    padding: 0px;
+}
+body > section.workshop > .workshops div div div > .workshop div div img{
+    width: 100%;
+    height: auto;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels{
+    width: auto;
+    padding: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels > .title{
+    color: #333;
+    font-size: 27px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels > .content{
+    margin-top: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels > .content ul{
+    list-style-type: none;
+    padding-right: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels > .content ul > li{
+    color: #555;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 9px 0px;
+}
+body > section.workshop > .workshops div div div > .workshop div div  > .datels > button{
+    width: auto;
+    background: #16a085;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px;
+    margin: 0px auto;
+    display: block;
+}
+
+body > section.workshop > .workshops div div div > .workshop-init{
+    width: auto;
+    margin: 57px 0px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .show{
+    width: 100%;
+    height: auto;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels{
+    width: auto;
+    background: #fff;
+    padding: 29px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels > .title{
+    color: #333;
+    font-size: 27px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels > .content{
+    margin-top: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels > .content ul{
+    list-style-type: none;
+    padding-right: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels > .content ul > li{
+    color: #555;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 9px 0px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .datels > button{
+    width: auto;
+    background: #16a085;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px;
+    margin: 0px auto;
+    display: block;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .widget{
+    width: auto;
+    background: #fff;
+    padding: 29px;
+    margin-bottom: 27px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .widget > p{
+    color: #333;
+    font-size: 17px;
+    margin: 15px;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .widget > p > .fa{
+    color: #16a085;
+}
+body > section.workshop > .workshops div div div > .workshop-init div div > .widget > p > a{
+    color: #16a085;
+}
