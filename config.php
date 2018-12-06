@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'baseUrl' => 'http://localhost:8000/',
+    // 'baseUrl' => 'http://localhost:8000/',
+    'baseUrl' => 'https://komichohub.github.io/',
     'production' => false,
     'collections' => [
 
