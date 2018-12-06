@@ -6,12 +6,16 @@ return [
     'collections' => [
 
         'posts' => [
-            'path' => '{-category}/{filename}',
+            'path' => '{-category}/{-subcategory}/{filename}',
         ],
 
         'category' => [
             'path' => '{-slug}',
-        ]
+        ],
+
+        'subcategory' => [
+            'path' => '{-category}/{-slug}',
+        ],
 
     ],
 ];
