@@ -6,7 +6,7 @@
   },
   "_release": "e-tag:W/\"7f3b13e",
   "main": "index.css",
-  "_source": "https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css",
+  "_source": "https://cdn.jsdelivr.net/gh/morteza/bootstrap-rtl@v3.3.4/dist/css/bootstrap-rtl.min.css",
   "_target": "*",
-  "_originalSource": "https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css"
+  "_originalSource": "https://cdn.jsdelivr.net/gh/morteza/bootstrap-rtl@v3.3.4/dist/css/bootstrap-rtl.min.css"
 }
