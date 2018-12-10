@@ -7,6 +7,17 @@
         <link rel="stylesheet" href="{{ $page->baseUrl }}assets/assets/resources/styles.css">
         <script src="{{ $page->baseUrl }}assets/dist/all.js"></script>
         <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130772689-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-130772689-1');
+        </script>
+
     </head>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
