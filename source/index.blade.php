@@ -47,11 +47,11 @@ title: "Jigsaw is awesome!"
 
             <div class="row">
 
-                
+                @foreach ($category as $cat)
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a href="#/123">df</a>
+                            <a href="{{ $cat->_meta->url[0] }}">{{ $cat->title }}</a>
                             <div class="pull-left">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -59,20 +59,23 @@ title: "Jigsaw is awesome!"
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu pull-left" role="menu">
-                                        <li ng-repeat="sub in categorie.subs">
-                                            <a href="#/112/123">sdfsf</a>
+                                        @foreach ($subcategory->where('category', $cat->slug) as $scat)
+                                        <li>
+                                            <a href="{{ $scat->_meta->url[0] }}">{{ $scat->title }}</a>
                                         </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body text-center">
-                        description
+                        {{ $cat->description }}
                         </div>
                         <!-- /.panel-body -->
                     </div>
                 </div>
+                @endforeach
                 
 
             </div>

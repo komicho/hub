@@ -1,7 +1,7 @@
 ---
 title: NodeJs
 slug: nodejs
-description: الوصف
+description: هو نظام برامج مصمم لكتابة تطبيقات إنترنت قابلة للتوسع كخوادم الويب
 extends: _layouts.category
 section: body
 ---
