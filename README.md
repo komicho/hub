@@ -11,5 +11,5 @@
 ## الاستخدام
 اذا كنت عضو في كومتشو هاب يمكنك استخدام الأمر التالي
 
-`montage.sh "commit message"`
+<code dir="ltr">montage.sh "commit message"</code>
 </div>
