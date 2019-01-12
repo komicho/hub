@@ -3,7 +3,7 @@
     
     <body>
         <section class="content">
-            <div class="hello">
+            <div class="hello" style="background-image: url(../../../assets/images/media/covers/{{ $page->cover }});">
                 <div class="layer">
                     <div class="content">
                         <h1>{{ $page->title }}</h1>
