@@ -24,10 +24,10 @@
                         <div class="col-md-4">
                             <div class="categorys-box">
                                 <div class="title">الاقسام</div>
-                                <div class="category" ng-init="allCategories()">
+                                <div class="category">
                                     <ul>
                                         @foreach($category as $cat)
-                                        <li ng-repeat="sub in categorie.subs"><a href="{{ $cat->_meta->url[0] }}">{{ $cat->title }}</a></li>
+                                        <li><a href="{{ $cat->_meta->url[0] }}">{{ $cat->title }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>

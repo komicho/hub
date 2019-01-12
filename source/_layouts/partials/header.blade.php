@@ -8,7 +8,12 @@
         <meta property="og:title" content="@yield('titlePage')" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="{{ $page->getUrl() }}" />
-        <meta property="og:image" content="{{ $page->baseUrl }}assets/images/og_image.png" />
+        <!-- <meta property="og:image" content="{{ $page->baseUrl }}assets/images/og_image.png" /> -->
+        @if ($page->extends == '_layouts.post')
+        <meta property="og:image" content="{{ $page->baseUrl }}assets/images/media/covers/@if($page->subcategory != ''){{$subcategory[$page->subcategory]->cover}}@endif" />
+        @else
+        <meta property="og:image" content="{{ $page->baseUrl }}assets/images/media/covers/{{ $page->cover }}" />
+        @endif
         <meta property="article:author" content="{{ $page->author }}" />
         
         <link rel="stylesheet" href="{{ $page->baseUrl }}assets/assets/resources/styles.css">
