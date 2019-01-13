@@ -1,7 +1,8 @@
 ---
-title: الاتصال بقاعده البيانات من خلال nodeJs
 extends: _layouts.post
 section: body
+title: الاتصال بقاعده البيانات من خلال nodeJs
+date: 2018-12-07 01:29:07
 author: Karim Mohamed
 category: nodejs
 subcategory: nodejs-mysql

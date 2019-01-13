@@ -1,7 +1,8 @@
 ---
-title: مقدمة في نظام git
 extends: _layouts.post
 section: body
+title: مقدمة في نظام git
+date: 2018-12-05 11:49:09
 author: Karim Mohamed
 category: devops
 subcategory: git
