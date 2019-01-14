@@ -20,6 +20,7 @@
                                 @yield('body')
                             </div>
                             <!-- ./content-view -->
+                            @include('_layouts.partials.comment')
                         </div>
                         <div class="col-md-4">
                             <div class="categorys-box">
