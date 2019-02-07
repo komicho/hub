@@ -1,6 +1,6 @@
 ---
-title: نتفليكس
-slug: netflix
+title: Arctuchers
+slug: arctuchers
 description: الوصف
 icon: name.png
 cover: git.png

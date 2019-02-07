@@ -5,7 +5,7 @@ title: DevOps في نتفليكس
 date: 2019-01-14 21:49:34
 author: Karim Mohamed
 category: discussions
-subcategory: netflix
+subcategory: arctuchers
 ---
 تمتلك نتفليكس بنية اساسية من السييرفرات وخدمات الويب علي سيرفرات اميزوان .. سوف نتعرف علي كيفية العمل داخل نتفليكس ونشر الشفرات البرمجية علي خوادم الويب .. ومما بزيد الامر اثارة ان نتفليكس تعمل من خلال Microserver.
 

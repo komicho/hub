@@ -17,9 +17,11 @@
                             <!-- .content-box -->
                             <ol class="content-box">
                                 @foreach ($posts->where('category', $page->getFilename()) as $post)
+                                @if($post->published == true)
                                 <li>
-                                    <h2><a href="{{ $post->_meta->url[0] }}">{{ $post->title }}</a></h2>
+                                    <h2><a href="{{ $post->_meta->url[0] }}">{{ $post->title }} - {{ $post->static }}</a></h2>
                                 </li>
+                                @endif
                                 @endforeach
                             </ol>
                             <!-- ./content-box -->
