@@ -3,7 +3,7 @@ title: Arctuchers
 slug: arctuchers
 description: الوصف
 icon: name.png
-cover: git.png
+cover: arctuchers.jpg
 extends: _layouts.subcategory
 section: body
 category: discussions
