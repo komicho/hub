@@ -74,6 +74,15 @@ section.content > .content-list div div div .content-view{
     padding: 15px;
     margin: 15px 0px;
 }
+section.content > .content-list div div div .content-view p img{
+    width: 100%;
+    height: auto;
+    margin: 15px 0px;
+}
+section.content > .content-list div div div .content-view pre code{
+    direction: ltr;
+    text-align: left;
+}
 /* *************************************** ./content view *************************************** */
 section.content > .content-list div div div .categorys-box{
     width: auto;

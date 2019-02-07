@@ -30,6 +30,10 @@
             gtag('config', 'UA-130772689-1');
         </script>
 
+        <link rel="stylesheet" href="{{ $page->baseUrl }}assets/assets/resources/css/github.css">
+        <script src="{{ $page->baseUrl }}assets/assets/resources/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
     </head>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
