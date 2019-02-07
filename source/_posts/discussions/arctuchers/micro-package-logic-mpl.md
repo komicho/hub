@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: body
-title: micro package logic - MPL
+title: منطق الحزمة الصغيرة - MPL
 date: 2019-02-07 16:19:49
 author: Karim Mohamed
 category: discussions
