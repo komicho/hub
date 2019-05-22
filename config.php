@@ -2,9 +2,7 @@
 
 return [
     'baseTitle' => 'كومتشو هاب',
-
-    // 'baseUrl' => 'http://localhost:8000/',
-    'baseUrl' => 'http://hub.komicho.com/',
+    'baseUrl' => 'http://localhost:8000/',
     'production' => false,
     'collections' => [
 
