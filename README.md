@@ -8,10 +8,9 @@
 - نشر المعرفة بلغتنا الام
 - إنشاء محتوى عربي فعال
 
-## الاستخدام
-اذا كنت عضو في كومتشو هاب يمكنك استخدام الأمر التالي
+## بناء
 
-<code dir="ltr">montage.sh "commit message"</code>
+<code dir="ltr">.\vendor\bin\jigsaw build production && git add build_production && git commit -m "Build for deploy" && git subtree push --prefix build_production origin gh-pages</code>
 
 ## نحن نستخدم
 - [tightenco/jigsaw](https://github.com/tightenco/jigsaw) Simple static sites with Laravel's Blade
