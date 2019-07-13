@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>الاتصالات في Microservice | كومتشو هاب</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="الاتصالات في Microservice | كومتشو هاب" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="http://hub.komicho.com/architectures/microservices/communication-in-microservice" />
+        <!-- <meta property="og:image" content="http://hub.komicho.com/assets/images/og_image.png" /> -->
+                <meta property="og:image" content="http://hub.komicho.com/assets/images/media/covers/microservices.jpg" />
+                <meta property="article:author" content="Karim Mohamed" />
+        
+        <link rel="stylesheet" href="http://hub.komicho.com/assets/assets/resources/styles.css">
+        <script src="http://hub.komicho.com/assets/dist/all.js"></script>
+        <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130772689-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-130772689-1');
+        </script>
+
+        <link rel="stylesheet" href="http://hub.komicho.com/assets/assets/resources/css/github.css">
+        <script src="http://hub.komicho.com/assets/assets/resources/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#"><i class="fa fa-building" aria-hidden="true"></i></a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://hub.komicho.com/">الصفحة الرئيسية</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>    
+    <body>
+        <section class="content">
+            <div class="hello" style="background-image: url(../../../assets/assets/resources/img/background-text.jpg);">
+                <div class="layer">
+                    <div class="content">
+                        <h2>الاتصالات في Microservice</h2>
+                        <!-- <p><span><i class="fa fa-user" aria-hidden="true"></i> <a href="#">كريم محمد</a></span> <span><i class="fa fa-bookmark" aria-hidden="true"></i> <a href="#">لارافيل</a></span></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- .content-view -->
+                            <div class="content-view">
+                                <p>قد تحدثت معاكم في التدوينة السابقة عن <a href="http://hub.komicho.com/architectures/microservices/what-is-microservices/">ماهي Microservices</a> والان سوف اتحدث عن كيفية الاتصال بين الخدمات المصغرة مع بعضها البعض. ولكن يجب ان نعرف بعض الأمور عن طريقة الاتصال وما هي أنواعها وكيف تتم.</p>
+<p>تنقسم أنواع الاتصال إلى نوعين وكل نوع يعمل عكس النوع الاخر وهما متزامن (synchronous) أو غير متزامن (asynchronous) ولكل نوع منهم دور في تحديد طريقة الاتصال وكيف تعمل الخدمة داخل البنية التحتية الخاصة بالسيرفر.</p>
+<p>وقبل اي شرح يجب أن يكون لدينا نظام. هذا النظام يقوم بعملية الإرسال والاستقبال والانتظار بين الخدمات المطلوبة من جانب العميل ويكون لهذا النظام بوبه دخول وتكون هي (api gateway) وسوف نأتي في تعريفها وماهو دورها الاساسي.</p>
+<h3>ماهي api gateway</h3>
+<p>هي البوابة الاساسية للنظام والتي تقوم بارسال الطلب الى الخدمات المعنية لهذا الطلب ويكون لها دور مهما في عملية التحقق من صلاحية المستخدم (العميل) حيث التأكد من التصريح لها بالاتصال لهذا النظام أم لا.</p>
+<h3>نبداء بشرح المتزامن (synchronous)</h3>
+<p>وهو الاسهل والابسط في الشرح والاستخدام حيث يعتمد بشكل مباشر على بروتوكول http حيث يقوم العميل بارسال الطلب وانتظار الاستجابة حيث لن يمكن للعميل القيام بأي نشاط إلا بعد استلام الاستجابة من الطلب.
+حيث يمكنك ارسال طلب الى خدمة تعمل على الشبكة المحليه علي السيرفر من ثم انتظار الرد بالاستجابة وإرساله مرة أخرى إلى العميل. كل هذا يحدث من خلال api gateway.</p>
+<h3>غير متزامن (asynchronous)</h3>
+<p>وهنا يأتي دور التركيز والتعقيد في تنفيذ التعليمات البرمجية داخل الخدمات حيث يقوم العميل بارسال الطلب من خلال api gateway ومن ثم التأكد من صلاحيات هذا العمل وبعد ذلك يتم ارسال الطلب الى الخدمة المعنية وهنا يتم الرد علي العميل قبل قيام الخدمة بالغرض منها حيث يتم الرد علي العميل بجملة مثل جاري التحميل... حيث تعمل الخدمة في خلفية السيرفر وبعد انتهاء الخدمة من عملها تقوم بالرد على العميل من خلال callback url.
+ماهي طرق الاتصال المستخدمة؟
+في الحقيقة لدينا طريقتان لهذا النوع من الاتصال وهو الغير متزامن لهذا نستخدم queue او pub/sub ونستخدم كل واحده منهم لغرض معين.</p>
+<h3>الغرض من استخدام queue:-</h3>
+<p>هو اتصال خدمة بخدمة أخرى حيث تدخل العملية في طابور الانتظار لهذه الخدمة (queue job) ومن ثم الانتهاء من تنفيذها وارسال الرد الي العميل باستخدام callback url حيث يتم إنهاء عمل الخدمة بعد ذلك.</p>
+<h3>الغرض من استخدام pub/sub:-</h3>
+<p>وتعني publish/subscribe النشر والاشتراك .. حيث تقوم بنشر رسائل إلى الخدمات الأخرى المشتركة في هذه الخدمة.
+وهنا يكون الامر مختلف قليلا عن queue حيث يكون الاتصال من خدمة إلى مجموعة من الخدامات تكون مشتركة عند الخدمة الأم لها .. مثال لدينا خدمة تسجيل مستخدم جديد ولدينا خدمة تعمل على تسجيل المعلومات وخدمة اخري تقوم بارسال رساله ترحيب عبر البريد الالكتروني وخدمة أخري تعمل علي ارسال رمز تفعيل الحساب عبر SMS. سوف تعمل الخدمات بالشكل التالي وهو ارسال معلومات المستخدمة من api gateway ثم الإرسال إلى خدمة تسجيل المستخدم الجديد ثم نشر (publish) معلومات المستخدم إلى الخدمات المشتركة (subscribe) في هذه الخدمة حيث تقوم كلنا من الخدمات التالية (تسجيل المعلومات في db - إرسال رسالة ترحيبية عبر البريد الالكتروني - ارسال رمز التفعيل عبر SMS) باستلام معلومات المستخدم في رساله ومن هنا تعمل كل خدمة في نفس الوقت على الانتهاء من الغرض منها حيث تقوم خدمة التسجيل بتسجيل المعلومات وإرسال البريد بإرسال البريد وارسال رمز التفعيل بإرسال هذا الرمز.</p>
+<h4>كيف تعمل pub/sub؟</h4>
+<p>تعمل باستخدام Command داخل الخدمة المشتركة عند الخدمة الاخرى حيث أي عملية نشر يتم استلامها في الوقت الحقيقي من نشرها حتى يتم تنفيذ التعليمات البرمجية حين استلام الرساله من الخدمة الناشرة. وهنا مثال توضيحي علي كيفه العمل <a href="https://laravel.com/docs/5.8/redis#pubsub">laravel pubsub</a> .</p>
+<p>وهنا قد ننتهي من هذه التدوينة عن ماهي طرق الاتصال بين الخدمات وفي التدوينة التالية نتحدث عن تكوني هيكل الخدمة</p>
+<p>كريم محمد</p>                            </div>
+                            <!-- ./content-view -->
+                            <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://komichohub.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                        </div>
+                        <div class="col-md-4">
+                            <div class="categorys-box">
+                                <div class="title">الاقسام</div>
+                                <div class="category">
+                                    <ul>
+                                                                                <li><a href="http://hub.komicho.com/architectures">هندسة معمارية</a></li>
+                                                                                <li><a href="http://hub.komicho.com/devops">DevOps</a></li>
+                                                                                <li><a href="http://hub.komicho.com/discussions">مناقشات</a></li>
+                                                                                <li><a href="http://hub.komicho.com/nodejs">NodeJs</a></li>
+                                                                                <li><a href="http://hub.komicho.com/php">Php</a></li>
+                                                                                <li><a href="http://hub.komicho.com/vue">Vue</a></li>
+                                                                            </ul>
+                                </div>
+                            </div>
+
+                            <!-- <div class="categorys-box">
+                                <div class="title">المساهمين</div>
+                                <div class="category">
+                                    <div class="media" ng-repeat="contributor in contributors">
+                                        <div class="media-left" style="padding:0px 0px 0px 10px">
+                                            <img class="media-object" ng-src="https://avatars.githubusercontent.com/u/contributor.author.id" style="width: 55px;height: auto;">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">contributor.author.name</h4>
+                                            contributor.message
+                                            <p><i>contributor.date | date:'yyyy-MM-dd'</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+    </body>
+   <footer>
+        <div class="footer">
+            <img src="http://hub.komicho.com/assets/assets/resources/img/logo.png" alt="">
+            <b>جميع الحقوق محفوظة - 2018</b>
+        </div>
+    </footer>
+    <script src="http://hub.komicho.com/assets/dist/core.js"></script>
+</html>
